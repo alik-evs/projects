@@ -11,16 +11,13 @@ a = b;
 alert(`a = ${a} and b = ${b}`);
 
 //4
-let dance = "hip-hop";
-let quantity = 4;
-let isMember = true;
-let undefinedVal = undefined;
-let age = null;
-console.log(`dance: ${dance} type is ${typeof(dance)}`);
-console.log(`quantity: ${quantity} type is ${typeof(quantity)}`);
-console.log(`isMember: ${isMember} type is ${typeof(isMember)}`);
-console.log(`undefinedVal: ${undefinedVal} type is ${typeof(undefinedVal)}`);
-console.log(`age: ${age} type is ${typeof(age)}`);
+let dataObject  = {
+    String: "Apple",
+    Number: 2,
+    Boolean: false,
+    Undefined: undefined,
+    Null: null
+    };
 
 
 //5
