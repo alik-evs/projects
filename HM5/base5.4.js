@@ -40,31 +40,26 @@ class Marker {
     }
   
     print(text) {
-      let printedText = "";
       const inkPerSymbol = 0.5;
+      let printedText = "";
+      let availableSymbols = Math.floor(this.inkAmount / inkPerSymbol); // Количество доступных символов
   
-      for (let i = 0; i < text.length; i++) {
+      for (let i = 0; i < text.length && availableSymbols > 0; i++) {
         const symbol = text[i];
-        if (symbol !== " " && this.inkAmount >= inkPerSymbol) {
+        if (symbol !== " ") {
           printedText += symbol;
-          this.inkAmount -= inkPerSymbol;
-        } else if (symbol === " ") {
-          printedText += " ";
+          availableSymbols--;
         } else {
-          break;
+          printedText += " ";
         }
       }
   
-      console.log("%c" + printedText, `color: ${this.color}`);
-      if (this.inkAmount >= inkPerSymbol && printedText.length < text.length) {
-        this.print(text.slice(printedText.length));
-      }
+      console.log(`%c${printedText}`, `color: ${this.color}`);
     }
   }
   
   const marker = new Marker("blue", 100);
-  marker.print("Hello, World!");
-
+  marker.print("Hello, World!"); // не добила(
   
   class Worker {
     constructor(fullName, dayRate, workingDays) {
