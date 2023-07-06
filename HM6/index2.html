@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    
+      h1 {
+        color: black;
+        background-color: #00ff91;
+        font-size: 24px;
+        text-align: center;
+      }
+      
+      #myDiv p:first-child {
+        font-weight: bold;
+      }
+      
+      #myDiv p:nth-child(2) {
+        color: red;
+      }
+      
+      #myDiv p:nth-child(3) {
+        text-decoration: underline;
+      }
+      
+      #myDiv p:nth-child(4) {
+        font-style: italic;
+      }
+      
+      #myList {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        list-style-type: none;
+        padding: 0;
+      }
+      
+      #myList li {
+        display: inline;
+      }
+      
+      span {
+        display: none;
+      }
+    </style>
+</head>
+<body>
+  <h1>I'am a big header!!!</h1>
+  <div id="myDiv">
+    <p>First paragraph</p>
+    <p>Second paragraph</p>
+    <p>Third paragraph</p>
+    <p>Fourth paragraph</p>
+  </div>
+  <ul id="myList">
+    <li>Make</li>
+    <li>me</li>
+    <li>horizontal!</li>
+  </ul>
+  <span>Make me invisible, please!</span>
+  
+  <script>
+    const h1 = document.querySelector("h1");
+    h1.style.color = "black";
+    h1.style.backgroundColor = "#00ff91"; 
+    h1.style.fontWeight = "bold";
+    h1.style.fontSize = "24px";
+    h1.style.textAlign = "center";
+    
+    const paragraphs = document.querySelectorAll("#myDiv p");
+    paragraphs[0].style.fontWeight = "bold";
+    paragraphs[1].style.color = "red";
+    paragraphs[2].style.textDecoration = "underline";
+    paragraphs[3].style.fontStyle = "italic";
+    
+    const myList = document.getElementById("myList");
+    myList.style.display = "flex";
+    myList.style.flexDirection = "row";
+    myList.style.justifyContent = "space-around";
+    
+    const span = document.querySelector("span");
+    span.style.display = "none";
+    
+    const listItems = myList.getElementsByTagName("li");
+    let concatenatedText = "";
+    
+    for (let i = 0; i < listItems.length; i++) {
+      concatenatedText += listItems[i].textContent;
+    }
+    
+    myList.innerHTML = ""; 
+    
+    const listItem = document.createElement("li");
+    listItem.textContent = concatenatedText;
+    myList.appendChild(listItem);
+  </script>
+</body>
+</html>
