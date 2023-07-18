@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>header1</h3>
+        <div>text1</div>
+        <h3>header2</h3>
+        <div>text2</div>
+    
+        <script>
+            const h3Elements = document.querySelectorAll("h3");
+    
+            h3Elements.forEach(h3 => {
+                const nextElement = h3.nextElementSibling;
+                if (nextElement && nextElement.tagName === "DIV") {
+                    h3.parentElement.insertBefore(nextElement, h3);
+                }
+            });
+        </script>
+</body>
+</html>
