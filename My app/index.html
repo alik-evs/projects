@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Water Balance</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="welcome-message" id="welcomeMessage">
+      <h1>Wanna normalize water balance? Let's try!</h1>
+      <button id="startButton">Start</button>
+    </div>
+    <div class="name-form" id="nameForm" style="display: none;">
+      <label for="userName">Please enter your name:</label>
+      <input type="text" id="userName" required>
+      <button id="submitName">Submit</button>
+    </div>
+    <div class="user-info" id="userInfo" style="display: none;">
+      <h2 id="userNameDisplay"></h2>
+      <div class="tabs-container" id="tabsContainer" style="display: none;">
+        <div class="tab" id="todayProgressTab">
+          <h3>Today's progress</h3>
+          <div id="todayProgress">
+            <input type="checkbox" id="glass1">
+            <label for="glass1">Glass 1</label><br>
+            <input type="checkbox" id="glass2">
+            <label for="glass2">Glass 2</label><br>
+            <input type="checkbox" id="glass3">
+            <label for="glass3">Glass 3</label><br>
+            <input type="checkbox" id="glass4">
+            <label for="glass4">Glass 4</label><br>
+            <input type="checkbox" id="glass5">
+            <label for="glass5">Glass 5</label><br>
+            <input type="checkbox" id="glass6">
+            <label for="glass6">Glass 6</label><br>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

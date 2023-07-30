@@ -1,0 +1,64 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e0f2f1;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #b2ebf2;
+    border-radius: 5px;
+  }
+  
+  .welcome-message, .name-form, .user-info {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .user-info {
+    display: block;
+  }
+  
+  #userNameDisplay {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .tabs-container {
+    text-align: center;
+  }
+  
+  .tab {
+    padding: 10px 20px;
+    background-color: #64b5f6;
+    border: none;
+    border-radius: 5px 5px 0 0;
+    cursor: pointer;
+    color: #fff;
+  }
+  
+  .tab:not(.active) {
+    background-color: #42a5f5;
+  }
+  
+  .tab.active {
+    background-color: #1976d2;
+  }
+  
+  #todayProgress {
+    padding: 20px;
+  }
+  
+  #todayProgress.complete input[type="checkbox"] {
+    display: none;
+  }
+  
+  #todayProgress.complete label {
+    color: gray;
+  }
+  
+  
+ 
